@@ -12,7 +12,6 @@ from statsmodels.datasets import get_rdataset
 
 
 def load_and_scale_data():
-    # df = pd.read_csv('C:/Users/Aritri Baidya/Downloads/USArrests.csv', index_col=0)
     df = get_rdataset('USArrests').data
     scaler = StandardScaler()
     scaled_data = scaler.fit_transform(df)
