@@ -38,8 +38,6 @@ def cluster_and_print(df, linkage_matrix, num_clusters, label_col):
 
 
 def compare_correlation_euclidean():
-    # Load data
-    # df = pd.read_csv('C:/Users/Aritri Baidya/Downloads/USArrests.csv', index_col=0)
     df = get_rdataset('USArrests').data
     df_numeric = df.select_dtypes(include=[np.number])
     X = StandardScaler().fit_transform(df_numeric)
